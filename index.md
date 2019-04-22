@@ -39,13 +39,13 @@ is 81 points of data.
 '''
 resolution = 0.1
 domain = 4
-# ========================================= #
+# =================================== #
 
 
 
 
 
-# ================ Raw Data =============== #
+# =============== Raw Data ============= #
 '''
 We must make an array that contains our
 points of data and we do this using
@@ -66,7 +66,7 @@ operations.
 '''
 x = np.arange(-domain, domain + resolution, resolution)
 function_to_approximate = x ** 2
-# ========================================= #
+# ==================================== #
 
 
 
@@ -91,13 +91,13 @@ array.
 '''
 data = x.reshape(x.shape[0],1)
 label = function_to_approximate.reshape(function_to_approximate.shape[0], 1)
-# ========================================= #
+# ==================================== #
 
 
 
 
 
-# ================ The Neural Network ================= #
+# ========== The Neural Network =========== #
 '''
 Alright, so now we have the meat of the program, the
 neural network. To design a netwok to take in our data
@@ -163,7 +163,7 @@ history = model.fit(data, label,
                     epochs=1000,
                     batch_size=x.shape[0],
                     verbose=False)
-#=======================================================#
+# ==================================== #
 
 
 
@@ -192,4 +192,4 @@ plt.ylim((-5,20))
 plt.xlim((-10,10))
 plt.savefig('graph.png', bbox_inches='tight')
 plt.show()
-# ===================================== #
+# ==================================== #
